@@ -1,0 +1,8 @@
+read input
+sum = 0
+for i in $(seq 1 $input); do
+    read number
+    sum=$(( $sum + $number ))
+done
+
+printf "%.3f\n" `echo "$sum / $input" | bc -l`
